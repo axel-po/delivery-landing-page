@@ -1,0 +1,48 @@
+/* Footer */
+.footer {
+  background-color: $footer-color;
+  position: relative;
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    @include small {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 3rem;
+    }
+    @include small-mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title {
+    color: $black;
+    font-size: 2em;
+    margin-bottom: 1rem;
+  }
+
+  &__description {
+    color: $gray;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    cursor: pointer;
+  }
+  &__links {
+    li {
+      @extend .footer__description;
+    }
+  }
+
+  &__credit {
+    position: absolute;
+    bottom: 1.7rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: $gray;
+    font-size: 1.4rem;
+    a:hover {
+        color: $secondary-color;
+    }
+  }
+}

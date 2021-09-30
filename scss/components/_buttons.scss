@@ -1,0 +1,19 @@
+/* Buttons */
+.btn {
+  display: inline-flex;
+  @extend %flex-center;
+  padding: 1.4rem 2rem;
+  border-radius: 99rem;
+  background-color: $secondary-color;
+  font-size: 1.6rem;
+  font-weight: $font-semi-bold;
+  @include small {
+    font-size: 1.5rem;
+    padding: 1.2rem 2.4rem;
+  }
+
+  &__icon {
+    @extend %flex-center;
+    margin-right: 0.7rem;
+  }
+}

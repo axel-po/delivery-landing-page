@@ -1,0 +1,24 @@
+/* Section about */
+.about {
+  &__img {
+    fill: $secondary-color-light;
+    @include mobile {
+      justify-self: center;
+      grid-row: 2;
+    }
+  }
+
+  &__data {
+    justify-self: flex-end;
+    align-self: center;
+    @include mobile {
+      justify-self: center;
+    }
+  }
+
+  p {
+    @include mobile {
+      margin-bottom: 0;
+    }
+  }
+}

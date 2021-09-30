@@ -1,0 +1,92 @@
+/* Layout */
+.container {
+  max-width: 96.8rem;
+  margin: auto;
+  width: 90%;
+}
+
+.section {
+  padding: 9rem 0;
+  @include mobile {
+    padding: 5rem 0;
+  }
+
+  &__title {
+    color: $black;
+    font-size: 2.8rem;
+    font-weight: $font-bold;
+    line-height: 4.2rem;
+    margin-bottom: 1rem;
+    @include small {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+    @include mobile {
+      &:not(.home__title) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__paragraphe {
+    font-size: 1.6rem;
+    color: $gray;
+    font-weight: $font-light;
+    max-width: 40.2rem;
+    margin-bottom: 3rem;
+    @include small {
+      font-size: 1.5rem;
+    }
+    @include mobile {
+      max-width: none;
+      &:not(.home__txt) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 3rem;
+  @include mobile {
+    grid-template-columns: 1fr;
+    grid-gap: 2.5rem;
+  }
+}
+
+/* Header */
+.header {
+  @extend %flex-center;
+  justify-content: space-between;
+  height: 7.2rem;
+  font-size: 1.6rem;
+  color: $black;
+  font-weight: $font-semi-bold;
+
+  &__btn {
+    @include small {
+      display: none;
+    }
+
+    &--menu {
+      display: none;
+      font-size: 2.1rem;
+      cursor: pointer;
+      @include mobile {
+        display: block;
+      }
+    }
+  }
+}
+
+.nav {
+  @include mobile {
+    display: none;
+  }
+
+  &__links:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+}

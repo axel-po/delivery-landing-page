@@ -1,0 +1,13 @@
+/* Section security */
+.security {
+  &__data {
+    align-self: center;
+  }
+
+  &__img {
+    fill: $secondary-color-light;
+    @include mobile {
+      justify-self: center;
+    }
+  }
+}

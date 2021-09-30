@@ -1,0 +1,32 @@
+/* Section contact */
+.contact {
+  &__container {
+    grid-template-columns: 3fr 1.5fr 1.25fr;
+    @include small {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__data {
+    align-self: center;
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  &__contact {
+    align-self: center;
+    font-size: 1.4rem;
+    color: $gray;
+    span {
+      font-weight: $font-semi-bold;
+    }
+  }
+
+  &__button {
+    align-self: center;
+  }
+}

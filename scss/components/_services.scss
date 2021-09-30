@@ -1,0 +1,47 @@
+/* Section services */
+.services {
+  h2 {
+    text-align: center;
+  }
+
+  &__container {
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 2rem;
+    @include small {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__data {
+    @extend %flex-center;
+    flex-direction: column;
+    padding: 3.5rem 2.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    border-radius: 1.5rem;
+  }
+
+  &__img {
+    width: 13.5rem;
+    &--light {
+      fill: $secondary-color-light;
+    }
+  }
+
+  h3 {
+    font-size: 1.9rem;
+  }
+
+  p {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  &__btn {
+    font-size: 1.6rem;
+    color: $black;
+    font-weight: $font-semi-bold;
+  }
+}
